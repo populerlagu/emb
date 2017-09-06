@@ -1,0 +1,6 @@
+User-agent: *
+Disallow:/?_
+Disallow:/*_/$
+Disallow:/play/
+Disallow:/en.php
+Disallow:/k2ns.php

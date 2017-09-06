@@ -1,0 +1,14 @@
+RewriteEngine On
+RewriteBase /
+RewriteRule ^unduh-mp3-(.*).html$ items.php?search=$1 [L]
+RewriteRule ^kumpulan-mp3-(.*).html$ menu.php?list=$1 [L]
+RewriteRule ^unduh/watch$ single.php [L]
+RewriteRule ^play$ play.php [L]
+RewriteRule ^sitemap2.xml?$ sitemap2.php [L]
+RewriteRule ^sitemap3.xml?$ sitemap3.php [L]
+RewriteRule ^sitemap4.xml?$ sitemap4.php [L]
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule . / [L,R=301]
+RewriteCond %{HTTP_HOST} !^www\.
+RewriteRule ^(.*)$ http://www.%{HTTP_HOST}/$1 [R=301,L]
